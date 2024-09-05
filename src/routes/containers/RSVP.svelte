@@ -38,7 +38,7 @@
 	<div class="bg-primary-red min-h-screen py-28 flex xl:justify-center w-full">
 		<div class="container flex flex-col text-white xl:max-w-[800px] w-full">
 			<div class="flex flex-col gap-6">
-				<div class="text-4.5xl">RSVP & WISHES</div>
+				<div class="text-4.5xl leading-none mb-4">RSVP & WISHES</div>
 				<div>Kindly confirm your attendance by completing the form provided below:</div>
 				<div>Before 16th September 2024.</div>
 				<div>

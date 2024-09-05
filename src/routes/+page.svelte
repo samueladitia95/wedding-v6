@@ -10,6 +10,7 @@
 	import SaveTheDate from './containers/SaveTheDate.svelte';
 	import TheDetail from './containers/TheDetail.svelte';
 	import WeddingGift from './containers/WeddingGift.svelte';
+	import Wishes from './containers/Wishes.svelte';
 
 	$: galleries = data.wedding.galleries.map((el: string) => {
 		return pb.getFileUrl(data.wedding, el);
@@ -28,8 +29,9 @@
 	/>
 	<TheDetail />
 	<Gallery galleriesImages={galleries} />
-	<div>
+	<div class="grid grid-cols-1 xl:!grid-cols-2">
 		<Rsvp />
+		<Wishes wishes={data.wishes} />
 	</div>
 	<WeddingGift />
 	<Footer />

@@ -10,10 +10,16 @@ export default {
 				center: true
 			},
 			fontFamily: {
-				arizona: ['Arizona', ...defaultTheme.fontFamily.sans]
+				arizona: ['Arizona', ...defaultTheme.fontFamily.sans],
+				jakarta: ['Jakarta', ...defaultTheme.fontFamily.sans],
+				'arizona-var': ['Arizona-Var', ...defaultTheme.fontFamily.sans]
 			},
 			colors: {
-				'semi-white': '#EDE7E8'
+				'semi-white': '#EDE7E8',
+				'white-54': 'rgba(255, 255, 255, 0.54)'
+			},
+			fontSize: {
+				'4.5xl': '40px'
 			}
 		}
 	},

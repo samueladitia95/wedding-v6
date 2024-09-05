@@ -2,11 +2,11 @@
 	import { pb } from '$lib/pocketbase';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
+	export let data: PageData;
+	
+	import Intro from './containers/Intro.svelte';
 	import Footer from './containers/Footer.svelte';
 	import Gallery from './containers/Gallery.svelte';
-	import Intro from './containers/Intro.svelte';
-	export let data: PageData;
-
 	import Invitation from './containers/Invitation.svelte';
 	import Rsvp from './containers/RSVP.svelte';
 	import SaveTheDate from './containers/SaveTheDate.svelte';

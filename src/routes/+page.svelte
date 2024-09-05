@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { pb } from '$lib/pocketbase';
+	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 	import Footer from './containers/Footer.svelte';
 	import Gallery from './containers/Gallery.svelte';
+	import Intro from './containers/Intro.svelte';
 	export let data: PageData;
 
 	import Invitation from './containers/Invitation.svelte';
@@ -15,9 +17,21 @@
 	$: galleries = data.wedding.galleries.map((el: string) => {
 		return pb.getFileUrl(data.wedding, el);
 	});
+
+	onMount(() => {
+		document.body.classList.add('no-scrollbar');
+		document.body.classList.add('overflow-hidden');
+		window.scrollTo(0, 0);
+	});
 </script>
 
 <div>
+	<Intro
+		mainLogo={pb.getFileUrl(data.wedding, data.wedding.main_logo)}
+		bgMobile={pb.getFileUrl(data.wedding, data.wedding.intro_mobile)}
+		bgTablet={pb.getFileUrl(data.wedding, data.wedding.intro_tablet)}
+		bgDesktop={pb.getFileUrl(data.wedding, data.wedding.intro_desktop)}
+	/>
 	<Invitation
 		invImage1={pb.getFileUrl(data.wedding, data.wedding.Invitation_Image_1)}
 		invImage2={pb.getFileUrl(data.wedding, data.wedding.Invitation_Image_2)}

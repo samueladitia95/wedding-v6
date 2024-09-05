@@ -21,7 +21,9 @@ export default {
 				error: '#FF3838',
 				'primary-red': '#7A151E',
 				'bg-disabled': 'rgba(87, 87, 87, 0.54)',
-				'text-disabled': '#69585C'
+				'text-disabled': '#69585C',
+				'primary-button': '#151515',
+				'red-line': '#C40C23'
 			},
 			fontSize: {
 				'4.5xl': '40px'

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { pb } from '$lib/pocketbase';
 	import type { PageData } from './$types';
+	import Footer from './containers/Footer.svelte';
 	import Gallery from './containers/Gallery.svelte';
 	export let data: PageData;
 
@@ -21,4 +22,5 @@
 	<TheDetail />
 	<Gallery galleriesImages={galleries} />
 	<WeddingGift />
+	<Footer />
 </div>

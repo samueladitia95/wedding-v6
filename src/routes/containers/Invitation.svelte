@@ -31,7 +31,7 @@
 						<img src={invImage2} alt="invinite 2" class="w-44 md:!w-[220px] object-cover rounded" />
 					</div>
 				</div>
-				<div class="flex flex-col gap-5 mt-10 md:!text-xl">
+				<div class="flex flex-col gap-5 mt-10 md:!text-xl xl:!pt-80">
 					<div class="font-medium">Together with our parents</div>
 					<div class="flex flex-col gap-2">
 						<div>{groomParent}</div>
@@ -39,7 +39,9 @@
 					</div>
 				</div>
 
-				<div class="text-lg md:!text-2xl xl:!text-3xl md:!max-w-96 xl:!max-w-2xl font-medium mt-40 md:mt-28">
+				<div
+					class="text-lg md:!text-2xl xl:!text-3xl md:!max-w-96 xl:!max-w-2xl font-medium mt-40 md:mt-28"
+				>
 					Cordially invite you to the wedding of their children
 				</div>
 			</div>

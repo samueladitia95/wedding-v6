@@ -26,12 +26,12 @@
 </script>
 
 <div>
-	<!-- <Intro
+	<Intro
 		mainLogo={pb.getFileUrl(data.wedding, data.wedding.main_logo)}
 		bgMobile={pb.getFileUrl(data.wedding, data.wedding.intro_mobile)}
 		bgTablet={pb.getFileUrl(data.wedding, data.wedding.intro_tablet)}
 		bgDesktop={pb.getFileUrl(data.wedding, data.wedding.intro_desktop)}
-	/> -->
+	/>
 	<Invitation
 		invImage1={pb.getFileUrl(data.wedding, data.wedding.Invitation_Image_1)}
 		invImage2={pb.getFileUrl(data.wedding, data.wedding.Invitation_Image_2)}

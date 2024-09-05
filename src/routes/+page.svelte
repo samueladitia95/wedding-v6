@@ -6,6 +6,7 @@
 
 	import Invitation from './containers/Invitation.svelte';
 	import TheDetail from './containers/TheDetail.svelte';
+	import WeddingGift from './containers/WeddingGift.svelte';
 
 	$: galleries = data.wedding.galleries.map((el: string) => {
 		return pb.getFileUrl(data.wedding, el);
@@ -19,4 +20,5 @@
 	/>
 	<TheDetail />
 	<Gallery galleriesImages={galleries} />
+	<WeddingGift />
 </div>

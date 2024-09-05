@@ -12,7 +12,8 @@ export default {
 			fontFamily: {
 				arizona: ['Arizona', ...defaultTheme.fontFamily.sans],
 				jakarta: ['Jakarta', ...defaultTheme.fontFamily.sans],
-				'arizona-var': ['Arizona-Var', ...defaultTheme.fontFamily.sans]
+				'arizona-var': ['Arizona-Var', ...defaultTheme.fontFamily.sans],
+				roman: ['Times New Roman', ...defaultTheme.fontFamily.serif]
 			},
 			colors: {
 				'semi-white': '#EDE7E8',

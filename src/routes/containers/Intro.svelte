@@ -29,7 +29,7 @@
 	};
 </script>
 
-<div class="min-h-screen bg-primary-red">
+<div class="min-h-screen w-full bg-primary-red">
 	{#if isOpen}
 		<div class="relative min-h-screen w-screen flex flex-col justify-center items-center">
 			<img

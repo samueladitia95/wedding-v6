@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
-	
+
 	import Intro from './containers/Intro.svelte';
 	import Footer from './containers/Footer.svelte';
 	import Gallery from './containers/Gallery.svelte';
@@ -23,6 +23,23 @@
 		document.body.classList.add('overflow-hidden');
 		window.scrollTo(0, 0);
 	});
+
+	let player: HTMLAudioElement;
+	let isPlaying = false;
+	let songUrl: string = data.song || '';
+	const togglePlay = () => {
+		isPlaying = !isPlaying;
+	};
+
+	$: {
+		if (player) {
+			if (isPlaying) {
+				player.play();
+			} else {
+				player.pause();
+			}
+		}
+	}
 </script>
 
 <div>
@@ -31,6 +48,8 @@
 		bgMobile={pb.getFileUrl(data.wedding, data.wedding.intro_mobile)}
 		bgTablet={pb.getFileUrl(data.wedding, data.wedding.intro_tablet)}
 		bgDesktop={pb.getFileUrl(data.wedding, data.wedding.intro_desktop)}
+		{togglePlay}
+		bind:isPlaying
 	/>
 	<Invitation
 		invImage1={pb.getFileUrl(data.wedding, data.wedding.Invitation_Image_1)}
@@ -50,3 +69,5 @@
 	<WeddingGift />
 	<Footer />
 </div>
+
+<audio id="music-player" src={songUrl} bind:this={player} loop={true} />

@@ -10,9 +10,18 @@
 	export let bgMobile: string;
 	export let bgTablet: string;
 	export let bgDesktop: string;
+	export let togglePlay: () => void;
+	let isHovered = false;
+	export let isPlaying: boolean;
+
+	import playButton from '$lib/icons/buttons/Play-enabled.svg';
+	import playButtonHovered from '$lib/icons/buttons/Play-hovered.svg';
+	import pauseButton from '$lib/icons/buttons/Pause-enable.svg';
+	import pauseButtonHovered from '$lib/icons/buttons/Pause-hovered.svg';
 
 	const openInvitation = () => {
 		isOpen = true;
+		togglePlay();
 		setTimeout(() => {
 			animation1 = true;
 			setTimeout(() => {
@@ -101,6 +110,30 @@
 			>
 				Open Invitation
 			</button>
+		</div>
+	{/if}
+
+	{#if isOpen}
+		<div class="z-[1000]" in:fade={{ duration: 2000 }}>
+			<div class="fixed left-8 bottom-4 z-[1000]">
+				<button
+					class="cursor-pointer z-[1000]"
+					on:click={togglePlay}
+					on:mouseenter={() => (isHovered = true)}
+					on:mouseleave={() => (isHovered = false)}
+				>
+					<img
+						src={isPlaying
+							? isHovered
+								? pauseButtonHovered
+								: pauseButton
+							: isHovered
+								? playButtonHovered
+								: playButton}
+						alt="Media Button"
+					/>
+				</button>
+			</div>
 		</div>
 	{/if}
 </div>

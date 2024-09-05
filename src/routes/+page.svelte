@@ -6,6 +6,7 @@
 	export let data: PageData;
 
 	import Invitation from './containers/Invitation.svelte';
+	import Rsvp from './containers/RSVP.svelte';
 	import SaveTheDate from './containers/SaveTheDate.svelte';
 	import TheDetail from './containers/TheDetail.svelte';
 	import WeddingGift from './containers/WeddingGift.svelte';
@@ -27,6 +28,9 @@
 	/>
 	<TheDetail />
 	<Gallery galleriesImages={galleries} />
+	<div>
+		<Rsvp />
+	</div>
 	<WeddingGift />
 	<Footer />
 </div>

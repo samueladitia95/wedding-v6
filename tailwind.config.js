@@ -17,7 +17,11 @@ export default {
 			},
 			colors: {
 				'semi-white': '#EDE7E8',
-				'white-54': 'rgba(255, 255, 255, 0.54)'
+				'white-54': 'rgba(255, 255, 255, 0.54)',
+				error: '#FF3838',
+				'primary-red': '#7A151E',
+				'bg-disabled': 'rgba(87, 87, 87, 0.54)',
+				'text-disabled': '#69585C'
 			},
 			fontSize: {
 				'4.5xl': '40px'

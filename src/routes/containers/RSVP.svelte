@@ -58,7 +58,7 @@
 				<div class="flex flex-col gap-6">
 					<div class="text-4.5xl leading-none mb-4">RSVP & WISHES</div>
 					<div>Kindly confirm your attendance by completing the form provided below:</div>
-					<div>Before 13th September 2024.</div>
+					<div>Before 20th September 2024.</div>
 					<div>
 						Alongside RSVP, Please take a moment to express your warm regards and best wishes.
 					</div>

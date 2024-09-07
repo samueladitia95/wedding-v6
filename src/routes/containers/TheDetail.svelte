@@ -107,7 +107,7 @@
 						class="flex flex-col gap-4"
 						transition:fly={{ x: 200, duration: 1000, delay: 1500 + 200 * (index + 1) }}
 					>
-						<div class="font-arizona-var">{attire.name}</div>
+						<div class="font-arizona">{attire.name}</div>
 						<div class="font-arizona-var">{attire.desc}</div>
 					</div>
 				{/if}

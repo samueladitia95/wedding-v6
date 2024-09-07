@@ -18,7 +18,12 @@ export const schemaRsvp = z
 			.email({
 				message: 'Email is Invalid'
 			}),
-		is_attending: z
+		is_attending_holy_matrimony: z
+			.string({
+				required_error: 'is Attending is Required'
+			})
+			.default('No'),
+		is_attending_dinner_reception: z
 			.string({
 				required_error: 'is Attending is Required'
 			})

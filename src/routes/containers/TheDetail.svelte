@@ -5,7 +5,7 @@
 	const details = [
 		{
 			isActive: true,
-			name: 'Holy Matrimony',
+			name: 'HOLY MATRIMONY',
 			time: '13:00 PM',
 			location: 'Gereja Maria Diangkat ke Surga, Katedral Jakarta',
 			address: 'Gereja Maria Diangkat ke Surga, Katedral Jakarta',
@@ -14,7 +14,7 @@
 		{
 			isActive: true,
 			name: 'DINNER RECEPTION',
-			time: '18:00 PM',
+			time: '18:30 PM',
 			location: 'Azalia Hall',
 			address: 'Jl. Teluk Bitung No. 41, Jakarta Pusat',
 			coordinate: 'https://maps.app.goo.gl/XyZncKobfvWsckkD6'
@@ -25,13 +25,14 @@
 	const attires = [
 		{
 			isActive: true,
-			name: 'Holy matrimony',
+			name: 'HOLY MATRIMONY',
 			desc: 'Semi-Formal Attire'
 		},
 		{
 			isActive: true,
-			name: 'Dinner Reception',
-			desc: 'Formal Attire, No Silver & Maroon, No Batik'
+			name: 'DINNER RECEPTION',
+			// desc: 'Formal Attire, No Silver & Maroon, No Batik'
+			desc: 'Family - Formal Attire in silver or grey color\nFriends - Formal Attire (No Silver & Maroon)\n\nMen: Suits\nWomen: Dresses\nNo Batik'
 		}
 	];
 	$: attiresFiltered = attires.filter((el) => el.isActive);
@@ -106,7 +107,7 @@
 						class="flex flex-col gap-4"
 						transition:fly={{ x: 200, duration: 1000, delay: 1500 + 200 * (index + 1) }}
 					>
-						<div class="font-jakarta">{attire.name}</div>
+						<div class="font-arizona-var">{attire.name}</div>
 						<div class="font-arizona-var">{attire.desc}</div>
 					</div>
 				{/if}

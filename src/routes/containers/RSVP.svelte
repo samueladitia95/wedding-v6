@@ -22,7 +22,8 @@
 					name: form.data.name,
 					phone: form.data.phone,
 					email: form.data.email,
-					is_attending: form.data.is_attending,
+					is_attending_holy_matrimony: form.data.is_attending_holy_matrimony,
+					is_attending_dinner_reception: form.data.is_attending_dinner_reception,
 					plus_one: form.data.plus_one,
 					wishes: form.data.wishes,
 					from: form.data.from
@@ -58,7 +59,7 @@
 				<div class="flex flex-col gap-6">
 					<div class="text-4.5xl leading-none mb-4">RSVP & WISHES</div>
 					<div>Kindly confirm your attendance by completing the form provided below:</div>
-					<div>Before 16th September 2024.</div>
+					<div>Before 13th September 2024.</div>
 					<div>
 						Alongside RSVP, Please take a moment to express your warm regards and best wishes.
 					</div>
@@ -90,27 +91,56 @@
 
 						<div class="py-3">
 							<div class="text-sm flex">
-								Will you be attending the wedding? &nbsp
+								Will you be attending the holy matrimony? &nbsp
 								<p class="text-error max-w-2 -translate-y-1">*</p>
 							</div>
 							<div class="flex gap-12 md:gap-28 w-full ml-3 mt-3">
 								<div class="flex gap-2 items-center">
 									<input
-										name="is_attending"
+										name="is_attending_holy_matrimony"
 										type="radio"
 										class="w-5 h-5 appearance-none border-2 border-white/20 rounded-full box-content checked:bg-white checked:ring-4 checked:ring-primary-red checked:ring-inset"
 										value="Yes"
-										bind:group={$form.is_attending}
+										bind:group={$form.is_attending_holy_matrimony}
 									/>
 									<div class="">Yes</div>
 								</div>
 								<div class="flex gap-2 items-center">
 									<input
-										name="is_attending"
+										name="is_attending_holy_matrimony"
 										type="radio"
 										class="w-5 h-5 appearance-none border-2 border-white/20 rounded-full box-content checked:bg-white checked:ring-4 checked:ring-primary-red checked:ring-inset"
 										value="No"
-										bind:group={$form.is_attending}
+										bind:group={$form.is_attending_holy_matrimony}
+									/>
+									<div class="">No</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="py-3">
+							<div class="text-sm flex">
+								Will you be attending the dinner reception? &nbsp
+								<p class="text-error max-w-2 -translate-y-1">*</p>
+							</div>
+							<div class="flex gap-12 md:gap-28 w-full ml-3 mt-3">
+								<div class="flex gap-2 items-center">
+									<input
+										name="is_attending_dinner_reception"
+										type="radio"
+										class="w-5 h-5 appearance-none border-2 border-white/20 rounded-full box-content checked:bg-white checked:ring-4 checked:ring-primary-red checked:ring-inset"
+										value="Yes"
+										bind:group={$form.is_attending_dinner_reception}
+									/>
+									<div class="">Yes</div>
+								</div>
+								<div class="flex gap-2 items-center">
+									<input
+										name="is_attending_dinner_reception"
+										type="radio"
+										class="w-5 h-5 appearance-none border-2 border-white/20 rounded-full box-content checked:bg-white checked:ring-4 checked:ring-primary-red checked:ring-inset"
+										value="No"
+										bind:group={$form.is_attending_dinner_reception}
 									/>
 									<div class="">No</div>
 								</div>
@@ -160,8 +190,8 @@
 		in:fade={{ duration: 1000, delay: 0 }}
 	>
 		<div class="container flex flex-col text-center text-white gap-3 max-w-[800px]">
-			<h1 class="text-4.5xl px-5">THANK YOU FOR YOUR RSVP AND WISHES!</h1>
-			<p class="text-xs px-8">WE WILL CONTACT YOU FOR MORE INFORMATION AND DETAILS</p>
+			<h1 class="text-4.5xl px-5">Thank You For Your RSVP and Wishes!</h1>
+			<p class="text-xs px-8">We Will Contact You For More Information and Details</p>
 		</div>
 	</div>
 {/if}

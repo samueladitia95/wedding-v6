@@ -23,7 +23,6 @@
 					phone: form.data.phone,
 					email: form.data.email,
 					is_attending_holy_matrimony: form.data.is_attending_holy_matrimony,
-					is_attending_dinner_reception: form.data.is_attending_dinner_reception,
 					plus_one: form.data.plus_one,
 					wishes: form.data.wishes,
 					from: form.data.from
@@ -112,35 +111,6 @@
 										class="w-5 h-5 appearance-none border-2 border-white/20 rounded-full box-content checked:bg-white checked:ring-4 checked:ring-primary-red checked:ring-inset"
 										value="No"
 										bind:group={$form.is_attending_holy_matrimony}
-									/>
-									<div class="">No</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="py-3">
-							<div class="text-sm flex">
-								Will you be attending the dinner reception? &nbsp
-								<p class="text-error max-w-2 -translate-y-1">*</p>
-							</div>
-							<div class="flex gap-12 md:gap-28 w-full ml-3 mt-3">
-								<div class="flex gap-2 items-center">
-									<input
-										name="is_attending_dinner_reception"
-										type="radio"
-										class="w-5 h-5 appearance-none border-2 border-white/20 rounded-full box-content checked:bg-white checked:ring-4 checked:ring-primary-red checked:ring-inset"
-										value="Yes"
-										bind:group={$form.is_attending_dinner_reception}
-									/>
-									<div class="">Yes</div>
-								</div>
-								<div class="flex gap-2 items-center">
-									<input
-										name="is_attending_dinner_reception"
-										type="radio"
-										class="w-5 h-5 appearance-none border-2 border-white/20 rounded-full box-content checked:bg-white checked:ring-4 checked:ring-primary-red checked:ring-inset"
-										value="No"
-										bind:group={$form.is_attending_dinner_reception}
 									/>
 									<div class="">No</div>
 								</div>

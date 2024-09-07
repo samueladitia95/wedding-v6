@@ -10,14 +10,6 @@
 			location: 'Gereja Maria Diangkat ke Surga, Katedral Jakarta',
 			address: 'Gereja Maria Diangkat ke Surga, Katedral Jakarta',
 			coordinate: 'https://maps.app.goo.gl/d7kFthEg8ugiPLjdA'
-		},
-		{
-			isActive: true,
-			name: 'DINNER RECEPTION',
-			time: '18:30 PM',
-			location: 'Azalia Hall',
-			address: 'Jl. Teluk Bitung No. 41, Jakarta Pusat',
-			coordinate: 'https://maps.app.goo.gl/XyZncKobfvWsckkD6'
 		}
 	];
 	$: detailsFiltered = details.filter((el) => el.isActive);
@@ -27,16 +19,6 @@
 			isActive: true,
 			name: 'HOLY MATRIMONY',
 			desc: ['Semi-Formal Attire']
-		},
-		{
-			isActive: true,
-			name: 'DINNER RECEPTION',
-			// desc: 'Formal Attire, No Silver & Maroon, No Batik'
-			desc: [
-				'Family - Formal Attire in silver or grey color',
-				'Friends - Formal Attire (No Silver & Maroon)',
-				'Men: Suits, Women: Dresses, No Batik'
-			]
 		}
 	];
 	$: attiresFiltered = attires.filter((el) => el.isActive);
@@ -62,7 +44,7 @@
 					The Details
 				</div>
 			{/if}
-			<div class="flex flex-col xl:!grid xl:!grid-cols-6 gap-12">
+			<div class="flex flex-col gap-12">
 				<div class="hidden xl:!block" />
 				{#each detailsFiltered as detail, index}
 					{#if isShow}

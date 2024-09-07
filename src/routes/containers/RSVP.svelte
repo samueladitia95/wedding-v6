@@ -53,7 +53,7 @@
 	>
 		{#if isShow}
 			<div
-				class="container flex flex-col text-white xl:max-w-[800px] w-full"
+				class="container flex flex-col text-white w-full xl:max-w-[800px]"
 				in:fade={{ duration: 1000, delay: 500 }}
 			>
 				<div class="flex flex-col gap-6">

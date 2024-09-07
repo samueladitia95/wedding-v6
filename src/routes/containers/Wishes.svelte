@@ -12,7 +12,7 @@
 </script>
 
 <div
-	class="bg-primary-red min-h-screen max-h-screen xl:max-h-[1150px] overflow-auto no-scrollbar w-full"
+	class="bg-primary-red min-h-screen max-h-screen xl:max-h-[1200px] overflow-auto no-scrollbar w-full"
 	use:inview={{
 		rootMargin: '-100px',
 		unobserveOnEnter: true

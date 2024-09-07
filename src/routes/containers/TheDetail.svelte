@@ -26,13 +26,17 @@
 		{
 			isActive: true,
 			name: 'HOLY MATRIMONY',
-			desc: 'Semi-Formal Attire'
+			desc: ['Semi-Formal Attire']
 		},
 		{
 			isActive: true,
 			name: 'DINNER RECEPTION',
 			// desc: 'Formal Attire, No Silver & Maroon, No Batik'
-			desc: 'Family - Formal Attire in silver or grey color\nFriends - Formal Attire (No Silver & Maroon)\n\nMen: Suits\nWomen: Dresses\nNo Batik'
+			desc: [
+				'Family - Formal Attire in silver or grey color',
+				'Friends - Formal Attire (No Silver & Maroon)',
+				'Men: Suits, Women: Dresses, No Batik'
+			]
 		}
 	];
 	$: attiresFiltered = attires.filter((el) => el.isActive);
@@ -108,7 +112,9 @@
 						transition:fly={{ x: 200, duration: 1000, delay: 1500 + 200 * (index + 1) }}
 					>
 						<div class="font-arizona">{attire.name}</div>
-						<div class="font-arizona-var">{attire.desc}</div>
+						{#each attire.desc as attireDesc}
+							<div class="font-arizona-var">{attireDesc}</div>
+						{/each}
 					</div>
 				{/if}
 			{/each}
